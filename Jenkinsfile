@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Run Maven Project') {
           steps {
-            sh 'mvn compile test package'
+            sh 'mvn clean test'
           }
         }
 
