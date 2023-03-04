@@ -18,5 +18,11 @@ pipeline {
       }
     }
 
+    stage('mvn clean test') {
+      steps {
+        bat 'mvn clean test'
+      }
+    }
+
   }
 }
