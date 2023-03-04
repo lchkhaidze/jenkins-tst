@@ -49,7 +49,15 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>3.2.0</version>
+            <type>maven-plugin</type>
+        </dependency>
     </dependencies>
+
 
 
     <build>
@@ -76,21 +84,21 @@
                 </dependencies>
             </plugin>
 
-            <plugin>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <filesets>
-                        <fileset>
-                            <directory>allure-results</directory>
-                            <includes>
-                                <include>**/*.*</include>
-                            </includes>
-                            <followSymlinks>false</followSymlinks>
-                        </fileset>
-                    </filesets>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <artifactId>maven-clean-plugin</artifactId>-->
+<!--                <version>3.1.15</version>-->
+<!--                <configuration>-->
+<!--                    <filesets>-->
+<!--                        <fileset>-->
+<!--                            <directory>allure-results</directory>-->
+<!--                            <includes>-->
+<!--                                <include>**/*.*</include>-->
+<!--                            </includes>-->
+<!--                            <followSymlinks>false</followSymlinks>-->
+<!--                        </fileset>-->
+<!--                    </filesets>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
